@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Otopark Sistemi - Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    header {
+      background: linear-gradient(to right, #1ca023, #1167cf);
+      color: white;
+      padding: 15px 30px;
+      text-align: left;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .graph {
+      height: 100px;
+      background: linear-gradient(to right, #2ecc71 0%, #3498db 100%);
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    .status {
+      padding: 5px 10px;
+      background-color: #27ae60;
+      color: white;
+      display: inline-block;
+      border-radius: 5px;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+
+    .offline {
+      background-color: #e74c3c;
+    }
+
+    .btn {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background-color: #1f618d;
+    }
+
+    .icon-link {
+      float: right;
+      font-size: 24px;
+      text-decoration: none;
+      color: white;
+      margin-right: 15px;
+      transition: transform 0.2s;
+    }
+
+    .icon-link:hover {
+      transform: scale(1.2);
+      color: #f1c40f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="https://app.toger.co/admin/dashboard/view/raporlar">Toger Hızlı Park</a>
+
+    <a href="https://app.toger.co/admin/dashboard/view/raporlar">
+      <button class="btn" style="background-color: rgb(61, 163, 129); margin-left: 20px;">Ana sayfa</button>
+    </a>
+
+    <a href="https://app.toger.co/control-panel/all_points">
+      <button class="btn" style="background-color: rgb(61, 163, 129); margin-left: 10px;">Kullanıcı Modülü</button>
+    </a>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h3>Vaditepe Gölevleri Ücretli Otopark<span class="status">Çevrimiçi</span></h3>
+      <div class="graph"></div>
+      <button class="btn">Anlık Görüntü Al</button>
+      <a href="https://app.toger.co/admin/designer/camera/drawPolygon/10">
+        <button class="btn">Poligon Çiz</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Vaditepe Gölevleri Ücretli Otopark<span class="status offline">Çevrimdışı</span></h3>
+      <div class="graph"></div>
+      <button class="btn">Anlık Görüntü Al</button>
+      <a href="https://app.toger.co/admin/designer/camera/drawPolygon/10">
+        <button class="btn">Poligon Çiz</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Yeni Fatih 2 Giriş - Vaditepe Ücretli - d27b866c67d1dcc4<span class="status">Aktif</span></h3>
+      <div class="graph"></div>
+      <button class="btn">Yeniden Başlat</button>
+      <a href="https://app.toger.co/admin/pmsp?filter_from=d27b866c67d1dcc4">
+        <button class="btn">Pmsp Logları</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Vaditepe Fatih 1 Çıkış - Ücretli 23feea50033040a9<span class="status offline">Pasif</span></h3>
+      <div class="graph"></div>
+      <button class="btn">Yeniden Başlat</button>
+      <button class="btn">Pmsp Logları</button>
+    </div>
